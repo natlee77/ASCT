@@ -1,0 +1,633 @@
+<div class="container" >
+    <div class=" mx-1  d-flex box" style="justify-content:  flex-end;" >
+       <div class="me-5 pb-0 mt-1"> 
+             <p> personnummer , last name , age  , kö , diagnos, risk nivå</p>
+        </div>
+        <div class="d-flex   mt-1 mx-1">
+            <p class="me-2 ">  Tappningsnmr </p> 
+            <input type="text" style="height: 70%;">        
+       </div>
+    </div>
+
+   <!-- row 1 -->
+    <div class="grid-container d-flex ">
+
+        <!------------section column1 -->       
+
+
+    <div class="col-lg-6">
+        <!-- prov for patient   start -->
+        <div   class=" box pt-3  "   >
+        <div class="pi me-0     ">
+            <h6 style="color:red;margin-right: 50%;">Prov från patienten </h6> 
+            <div style="background-color: rgb(189, 245, 245);">
+            <p style=" padding-right: 1rem; ">Svar från patol </p> 
+        </div>
+        </div>
+       
+        <div class="d-flex " style="justify-content: flex-end;">      
+            <div class="pe-4"  style="justify-content: center;"  >
+                <p > ..</p>
+                <p > ..</p>
+                <p class=" mb-2" style="margin-bottom: .2rem; "> Före skörd </p> 
+                <p style="border-bottom: solid green;margin-bottom: .3rem;padding-bottom: .2rem; "> Efter skörd </p>                
+                <p style=" margin-top : 0; " > AferPåse </p> 
+            </div>         
+                <div id="Hb"> 
+                    <div >
+                        <p > Hb </p>  
+                        <p > ..</p>
+                        <input type="text" style="width:3rem; background-color: rgb(243, 177, 193); border: none;margin: .1rem; " >                 
+                        <div style="border-bottom: solid green;  ">
+                            <input type="text" style="width: 3rem; background-color: rgb(243, 177, 193); border: none;margin: .1rem;"> 
+                        </div>               
+                        <input type="text" style="width:3rem; background-color: rgb(243, 177, 193); border: none;margin: .1rem; ">                 
+                    </div> 
+                </div>
+                <div id="TPK"> 
+                    <div >
+                        <p > TPK</p>  
+                        <p > ..</p>
+                        <p >   </p> 
+                        <input type="text" style="width: 3rem;background-color:  rgb(177, 243, 215); border: none;margin: .1rem;  " >                 
+                        <div style="border-bottom: solid green;  ">
+                            <input type="text" style="width: 3rem; background-color:rgb(177, 243, 215); border: none;margin: .1rem;"> 
+                        </div>               
+                        <input type="text" style="width: 3rem; background-color: rgb(177, 243, 215); border: none;margin: .1rem; ">                 
+                    </div> 
+                </div>
+                <div id="LPK"  > 
+                    <div  >
+                        <p > LPK </p>  
+                        <p > ..</p>
+                        <p >   </p> 
+                        <input type="text" style="width: 3rem;  background-color: rgb(243, 242, 177); border: none;margin: .1rem; " >                 
+                        <div style="border-bottom: solid green;  ">
+                            <input type="text" style="width: 3rem;background-color: rgb(243, 242, 177); border: none;margin: .1rem;"> 
+                        </div>               
+                        <input type="text" style="width: 3rem; background-color: rgb(243, 242, 177); border: none;margin: .1rem; ">                 
+                    </div> 
+                </div>
+                <div id="MNC"  > 
+                    <div  >
+                        <p > MNC </p>  
+                        <p > (%) </p> 
+                        <input type="text" style="width: 3rem;background-color: rgb(243, 242, 177); border: none;margin: .1rem;  " >                 
+                        <div style="border-bottom: solid green;  ">
+                            <input type="text" style="width: 3rem;background-color: rgb(243, 242, 177); border: none;margin: .1rem;"> 
+                        </div>               
+                        <input type="text" style="width: 3rem;background-color: rgb(243, 242, 177); border: none;margin: .1rem;  ">                 
+                    </div> 
+                </div>
+                <div id="Gran">    
+                    <div >
+                        <p > Gran </p>  
+                        <p > (%) </p> 
+                        <input type="text" style="width: 3rem; background-color: rgb(243, 242, 177); border: none;margin: .1rem; " >                 
+                        <div style="border-bottom: solid green;  ">
+                            <input type="text" style="width: 3rem;background-color: rgb(243, 242, 177); border: none;margin: .1rem;"> 
+                        </div>               
+                        <input type="text" style="width: 3rem; background-color: rgb(243, 242, 177); border: none;margin: .1rem; ">                 
+                    </div> 
+                </div>      
+    
+                <div style="background-color: rgb(189, 245, 245);">
+                        
+                    <div id="C3+" class="d-flex" style="justify-content: flex-end;">
+                        <div >
+                            <p > C3+ </p>  
+                            <p > (%) </p> 
+                            <input type="text" style="width: 3rem; background-color: rgb(243, 177, 177); border: none;margin: .1rem; " >                 
+                            <div style="border-bottom: solid green;  ">
+                                <input type="text" style="width: 3rem;background-color: rgb(243, 177, 177); border: none;margin: .1rem; "> 
+                            </div>               
+                            <input type="text" style="width: 3rem;  background-color: rgb(243, 177, 177); border: none;margin: .1rem; ">                 
+                        </div>
+
+                        <div id="C3+litr"  >
+                            <p style="color:red;">C3+ </p> 
+                            <p style="color:red; ">(x10<sup>9</sup>/l) </p> 
+                            <input type="text" style="width: 4rem; background-color: rgb(243, 177, 177); border: none;margin: .1rem; " > 
+                            <div style="border-bottom: solid green; ">
+                                <input type="text" style="width: 4rem;    background-color: rgb(243, 177, 177); border: none;margin: .1rem;  "> 
+                            </div>  
+                            <input type="text" style="width: 4rem;  background-color: rgb(243, 177, 177); border: none;margin: .1rem;   "> 
+                        </div>        
+                    </div>
+                </div>
+            </div>
+        </div>        <!-- prov for patient  end -->
+   
+        <!-- forslag for spädning  start -->
+        <div  class="box">
+            <div     style="justify-content: flex-end;"  >
+                <div class="pi  my-2">                
+                    <h6 style="color:red;">Förslag for spädning ? påsar </h6>                 
+                <div class="pi">
+                    <p class="me-1">Vikt aferspåse(g)</p> 
+                    <input type="text" style="width:30%;  height: 90%;  "> 
+                </div>               
+                </div>
+
+
+
+                <div class="d-flex mx-1"  style="justify-content: flex-end; ">
+                    <div class="  " style="justify-content: flex-end; ">
+                        <div class="pi "> 
+                            <p style="margin-right: 0.3rem;">Volym aferpåse(ml) </p> 
+                            <input type="text" style="width: 4rem;  height: 90%;  "> 
+                        </div  >
+
+                        <div style=" border: dotted gold;">
+                            <div class="pi" style="margin-top: .3rem;"> 
+                                <p style="margin-right: 0.3rem;">Volym före infrysning(ml) </p> 
+                                <input type="text" style="width: 4rem;  height:90%;background-color: rgb(232, 149, 240); border: none; "> 
+                            </div  >
+                            <div style="text-align: center;" >
+                                <p >+</p>
+                            </div>
+                            <div class="pi"> 
+                                <p style="margin-right: 0.3rem;">Plasma(g) </p> 
+                                <input type="text" style="width:4rem;  height: 90%;   "> 
+                            </div  >
+                        </div>                   
+                    </div>
+                
+
+                    <div class=" col-lg-1" style="text-align: center; margin-top: 4rem;" >
+                        <p> +</p>
+                    </div>
+
+                <div class="d-flex mx-1"  style="justify-content: flex-end; ">
+                    <div   >        
+                            <div class="pi "> 
+                            <p style="  margin-right: 0.3rem; ">Påsen centrifugerad</p> 
+                            <select type="text" style="width: 25%;  height: 90%;   ">
+                                <option value="Ja">Ja</option>
+                                <option value="Nej">Nej</option>
+                            </select>
+                        </div  >
+
+                            <div style=" border: dotted gold; width: 100%;">
+                                <div class="pi" style="  margin-top: .3rem;">                                             
+                                    <select type="text" style="width: 45%;  height:98%;  margin-right: 1rem; ">  
+                                        <option value=">"></option>
+                                        <option value="Ja">Albumin</option>
+                                        <option value="Nej">Plasma</option>
+                                    </select>
+                                    <input type="text" style="width: 4rem;  height: 100%;  "> 
+                                </div  >
+
+                            <div style="text-align: center;" >
+                                <p >+</p>
+                            </div>
+                                
+                                
+                                <div class="pi "> 
+                                    <p style="margin-right: 0.3rem; ">DMSO(ml) </p> 
+                                    <input type="text" style="width:4rem;  height: 90%;  "> 
+                                </div  >
+                            </div>
+                    
+                    </div>
+                
+
+
+                    
+                
+                </div>
+                
+                </div>
+
+
+                <!-- <div class="d-flex    " style="justify-content: flex-end;  ">                
+                <div>
+                    <div > 
+                </div>
+                            <div class="d-flex me-1"  style="justify-content: flex-end;  ">
+                    <p style="color:rgb(29, 60, 160); margin-right: 0.3rem; ">Påsen centrifugerad</p> 
+                    <select type="text" style="width: 30%;  height: 80%;  ">
+                        <option value="Ja">Ja</option>
+                        <option value="Nej">Nej</option>
+                    </select>
+                </div>            
+                
+                </div>
+                </div> -->
+        </div>
+        </div>
+        <!-- forslag for spädning   end -->
+        </div>
+        <!-------------section column 2-->
+       
+    <div   class=" col-lg-3"  > 
+         <!-- QC start-->
+      <div id="QC" class="box">
+        <div class="d-flex  pi mt-1">    
+            <h6 style="color:red;margin-left: 1rem;">QC  </h6>                
+            <div class=" pi me-0"  > 
+                <p class=" me-1"> Datum</p>
+                <input type="date" style="width:48%;height: 90%;">               
+            </div>    
+        </div>
+        <div class=" pi"  > 
+            <p class="me-1"> Viabilitet TB(%)</p>
+            <input type="text" style="width:40%;height: 90%;">               
+        </div>
+        <div class=" pi  "  > 
+            <p class="me-1" > Viabilitet 7-AAD(%)</p>
+            <input type="text" style="width:40%;height: 90%;">               
+        </div>
+        <div class=" pi mb-3 "  > 
+            <p  > LPK tinat prov (x10<sup>9</sup>/l) </p>
+            <input type="text" style="width:40%;  height: 90%;">               
+        </div>
+         
+        <div class=" pi "> 
+            <p  class="me-1"> Cellsusp/5ml-MC(ml) </p>
+            <input type="text" style="width:40%;height: 90%;">                                    
+        </div> 
+        <div class="pi "> 
+            <p  class="me-1"> Avläsningsdatum </p>
+                <input type="date" style="width:40%; height: 90%;">                                                    
+        </div>
+        <div class="pi "> 
+            <p  class="me-1"> CFU-GM 1/2/3</p>
+                <input type="text" style="width:12%; height: 90%;margin-right: .3rem;">   
+                <input type="text" style="width:12%; height: 90%;margin-right: .3rem;"> 
+                <input type="text" style="width:12%; height: 90%;">                                                  
+        </div>
+        <div class="pi "> 
+            <p  class="me-1"> Medelvärde</p>
+                <input type="text" style="width:40%; height: 90%;">                                                    
+        </div>
+
+      </div>
+
+        <!-- QC end-->
+ 
+
+        <!-- bakteriaodling  stert-->
+        <div class="box">
+            <div class="pi mt-1"> 
+                <p style="margin-right: 1rem; ">Bakterieodling </p> 
+                <select type="text" style="width:50%;  height: 90%;  "> 
+                    <option></option>
+                    <option>Ingen växt</option>
+                </select>
+            </div  >
+            <div style="margin-left: .3rem;margin-bottom: 0.3rem;" >
+                <input type="text" style="width:99%;  height:1.4rem;  "> 
+            </div>
+        </div>
+      <!-- bakteriaodling end -->
+
+
+
+       <!-- infryst produkt  start-->
+    <div class="box ">
+        <div class=" pi-ti">
+            <h6 style="color:red; margin-left: 1rem;">Infryst produkt </h6> 
+        </div>
+          
+        <div class=" pi  "  > 
+            <p class="me-2"> Skördad CD34+(x10<sup>6</sup>/l)</p>
+            <input type="text" style="width:30%;height: 90%;">               
+        </div>
+        <div class=" pi  "  > 
+            <p class="me-2"> Skördad CD3+(x10<sup>9</sup>/l)</p>
+            <input type="text" style="width:30%;height: 90%;">               
+        </div>
+        <div class=" pi  "  > 
+            <p class="me-2"> Kvar i frys vikt(x10<sup>6</sup>/l)</p>
+            <input type="text" style="width:30%;height: 90%;">               
+        </div>
+      
+    </div>
+  
+    </div>
+    
+      
+<!------------  section- column 3-->
+
+
+       <div   class="col-lg-3" > 
+ 
+     <!-- stamcellskörd start-->
+     <div   class="box  py-3  " > 
+        <div  style="margin-left: 1rem;margin-bottom: 1rem;">
+            <h6 style="color:red">Stamcellsskörd  </h6>
+        </div>
+       <div class="pi"> 
+        <div class=" pi"  > 
+           <div class="pi">
+            <p class="me-2"> längt</p>
+            <input type="text" style="width:40%;height: 90%;">           
+           </div>    
+           <div class="pi">
+            <p class="me-2"> vikt</p>
+            <input type="text" style="width:40%;height: 90%;">           
+           </div>   
+        </div>    
+       </div>
+       <div >
+        <div class=" pi"  > 
+            <p class="me-2" > Datum</p>
+            <input type="datetime" style="width:40%;;height: 90%;">               
+        </div>
+    </div>
+        <div class=" pi "  > 
+            <p class="mx-2"> Stamcellskälla </p>
+            <select style="width:40%;  height: 90%; ">  
+                <option> </option> 
+            <option>PBSC</option>
+            <option>BM</option>
+            </select>
+        </div>
+    
+        <div class=" pi "> 
+            <p class="mx-2">Aferesmaskin   </p>    
+            <select type="text" style="width:40%;height: 90%;">   
+                <option> </option>      
+                <option>Optia</option>
+                <option>Optia CMNC</option>
+                <option>Com Tech</option>
+                </select>                      
+        </div>
+        <div class=" pi "> 
+            <p > Behandladblodvolym(ml)</p>
+            <input type="text" style="width:40%;height: 90%;">                                    
+        </div> 
+        <div class="pi "> 
+            <p class="mx-2"> Behandlingstid(min)</p>
+                <input type="text" style="width:40%; height: 90%;">                                                    
+        </div>
+    
+        </div>
+    <!-- stamcellskörd end-->
+     <!-- resultat start -->
+    <div class="box mt-1 ">
+        <div style="margin-left: 1rem;">
+            <h6 style="color:red;">Resultat  </h6>             
+        </div>
+     
+        <div class=" pi  "  > 
+            <p class="me-2"> Skördad CD34+(x10<sup>6</sup>/l)</p>
+            <input type="text" style="width:30%;height: 90%;">               
+        </div>
+        <div class=" pi  "  > 
+            <p class="me-2"> Skördad CD3+(x10<sup>9</sup>/l)</p>
+            <input type="text" style="width:30%;height: 90%;">               
+        </div>
+        <div class=" pi  "  > 
+            <p class="me-2"> Kvar i frys vikt(x10<sup>6</sup>/l)</p>
+            <input type="text" style="width:30%;height: 90%;">               
+        </div>
+      
+    </div>
+    <!-- resultat end -->
+
+        <!-- CD34 utbyte  start-->
+        <div class="box d-flex mt-1" style="justify-content: flex-end; ">
+            <div >
+                <h6 style="color:red;margin-right: 2rem; ">CD34 utbyte </h6> 
+            </div>
+            <div>
+                <div class=" pi mt-1"  > 
+                    <p style=" margin-right: .5rem; ">CE 1 (%) </p> 
+                    <input type="text" style="width:4rem;  height: 90%;  "> 
+                </div  >
+                <div class="pi "> 
+                    <p style="margin-right: .5rem; ">CE 2 (%) </p> 
+                    <input type="text" style="width:4rem;  height: 90%;  "> 
+                </div  >
+            </div>
+        </div>
+        <!-- CD34 utbyte  end-->     
+      </div>
+ </div>
+ <!-- row1 end-->
+
+
+
+ <!-- row2 start-->
+   <!-- split start-->
+<div class="container-grid">
+    <div class="box  me-0">
+        <div class=" mb-1 " style=" margin-right: .5rem; ">
+            <div class="pi">
+                <h5 class="pi-p">Split</h5>
+                <h5 class="pi-p">A</h5>
+                <h5 class="pi-p">B</h5>
+                <h5 class="pi-p">C</h5>
+                <h5 class="pi-p">D</h5>
+                <h5 class="pi-p">E</h5>
+                <h5 class="pi-p">F</h5>
+                <h5 class="pi-p">G</h5>
+                <h5 class="pi-p">H</h5>
+                <h5 class="pi-p">I</h5>
+                <h5 class="pi-p">J</h5>
+            </div>
+
+
+          <div class="pi"> 
+            <p class="me-2">Volym (ml)   </p>
+            <input type="text" style="width:5rem;  height: 90%; margin: .2rem; "> 
+            <input type="text" style="width:5rem;  height: 90%; margin: .2rem; "> 
+            <input type="text" style="width:5rem;  height: 90%; margin: .2rem; "> 
+            <input type="text" style="width:5rem;  height: 90%; margin: .2rem; "> 
+            <input type="text" style="width:5rem;  height: 90%; margin: .2rem; "> 
+            <input type="text" style="width:5rem;  height: 90%; margin: .2rem;"> 
+            <input type="text" style="width:5rem;  height: 90%; margin: .2rem; "> 
+            <input type="text" style="width:5rem;  height: 90%; margin: .2rem; "> 
+            <input type="text" style="width:5rem;  height: 90%; margin: .2rem; "> 
+            <input type="text" style="width:5rem;  height: 90%; margin: .2rem; "> 
+          </div>
+          <div class="pi">
+            <p class="me-2" >Forvaringplats  </p>
+            <input type="text" style="width:5rem;  height: 90%; margin: .2rem; "> 
+            <input type="text" style="width:5rem;  height: 90%; margin: .2rem; "> 
+            <input type="text" style="width:5rem;  height: 90%; margin: .2rem; "> 
+            <input type="text" style="width:5rem;  height: 90%; margin: .2rem; "> 
+            <input type="text" style="width:5rem;  height: 90%; margin: .2rem; "> 
+            <input type="text" style="width:5rem;  height: 90%; margin: .2rem;"> 
+            <input type="text" style="width:5rem;  height: 90%; margin: .2rem; "> 
+            <input type="text" style="width:5rem;  height: 90%; margin: .2rem; "> 
+            <input type="text" style="width:5rem;  height: 90%; margin: .2rem; "> 
+            <input type="text" style="width:5rem;  height: 90%; margin: .2rem; "> 
+
+          </div>
+          <div class="pi">
+            <p class="me-2">Återinfusionsdatum   </p>
+            <input type="datetime" style="width:5rem;  height: 90%; margin: .2rem; "> 
+            <input type="datetime" style="width:5rem;   height: 90%; margin: .2rem; "> 
+            <input type="datetime" style="width:5rem;   height: 90%; margin: .2rem; "> 
+            <input type="datetime" style="width:5rem;   height: 90%; margin: .2rem; "> 
+            <input type="datetime" style="width:5rem;   height: 90%; margin: .2rem; "> 
+            <input type="datetime" style="width:5rem;  height: 90%; margin: .2rem; "> 
+            <input type="datetime" style="width:5rem;   height: 90%; margin: .2rem; "> 
+            <input type="datetime" style="width:5rem;   height: 90%; margin: .2rem; "> 
+            <input type="datetime" style="width:5rem;   height: 90%; margin: .2rem; "> 
+            <input type="datetime" style="width:5rem;   height: 90%; margin: .2rem; "> 
+
+          </div>
+          <div class="pi">
+            <p class="me-2">Kasseringsdatum   </p>
+            <input type="datetime" style="width:5rem;  height: 90%; margin: .2rem; "> 
+            <input type="datetime" style="width:5rem;   height: 90%; margin: .2rem; "> 
+            <input type="datetime" style="width:5rem;   height: 90%; margin: .2rem; "> 
+            <input type="datetime" style="width:5rem;   height: 90%; margin: .2rem; "> 
+            <input type="datetime" style="width:5rem;   height: 90%; margin: .2rem; "> 
+            <input type="datetime" style="width:5rem;  height: 90%; margin: .2rem; "> 
+            <input type="datetime" style="width:5rem;   height: 90%; margin: .2rem; "> 
+            <input type="datetime" style="width:5rem;   height: 90%; margin: .2rem; "> 
+            <input type="datetime" style="width:5rem;   height: 90%; margin: .2rem; "> 
+            <input type="datetime" style="width:5rem;   height: 90%; margin: .2rem; "> 
+          </div>         
+        </div>
+    </div>
+
+</div>
+<!-- split end-->
+ <!-- row2 end-->
+
+
+
+
+
+ <!-- row3  start-->
+    <div class="container-grid d-flex  ">
+
+     <!-- colunm left -->
+        <div class="box col-lg-8">
+            <div>
+                <table mat-table  [dataSource]="patientskords"  class="mat-elevation-z8">
+                    
+                    <!-- Skorddatum Column -->
+                    <ng-container matColumnDef="Skorddatum">
+                     <th mat-header-cell *matHeaderCellDef> Skörddatum </th>
+                     <td mat-cell *matCellDef="let patientskord"> {{patientskord.Skorddatum}} </td>  
+                     </ng-container>   
+                    <!--  LPKfore Column -->
+                   <ng-container matColumnDef="LPKfore" >
+                       <th mat-header-cell *matHeaderCellDef style="background-color: rgb(250, 181, 201); "> LPK före </th>
+                       <td mat-cell *matCellDef="let patientskord" style="background-color: rgb(250, 181, 201);"> {{patientskord.LPKfore }} </td> 
+                    </ng-container>                                                
+                    <!-- CD34fore Column -->
+                    <ng-container matColumnDef="CD34fore" >
+                     <th mat-header-cell *matHeaderCellDef style="background-color: rgb(245, 202, 202);"> CD34+ före </th>
+                     <td mat-cell *matCellDef="let patientskord" style="background-color: rgb(245, 202, 202);"> {{patientskord.CD34fore}} </td> 
+                   </ng-container>
+                                  
+                     <!-- Volym Column -->
+                     <ng-container matColumnDef="Volym">
+                     <th mat-header-cell *matHeaderCellDef style="background-color: rgb(217, 202, 245); "> Volym </th>
+                     <td mat-cell *matCellDef="let patientskord" style="background-color: rgb(217, 202, 245); "> {{patientskord.Volym }} </td>                  
+                     </ng-container>
+                       <!--  LPKfrys Column -->
+                      <ng-container matColumnDef="LPKfrys" >
+                     <th mat-header-cell *matHeaderCellDef  style="background-color: rgb(253, 247, 165); " > LPK frys </th>
+                     <td mat-cell *matCellDef="let patientskord" style="background-color: rgb(253, 247, 165); "> {{patientskord.LPKfrys}} </td> 
+                     </ng-container>  
+                                     
+                     <!-- CD34frys Column -->
+                         <ng-container matColumnDef="CD34frys" >
+                     <th mat-header-cell *matHeaderCellDef style="background-color: rgb(159, 241, 173); "> CD34+ frys </th>
+                     <td mat-cell *matCellDef="let patientskord" style="background-color: rgb(159, 241, 173);"> {{patientskord.CD34frys}} </td> 
+                     </ng-container>
+                         <!-- CD34 Column -->
+                      <ng-container matColumnDef="CD34kvar">
+                     <th mat-header-cell *matHeaderCellDef style="background-color: rgb(248, 217, 171);"> CD34+ kvar </th>
+                     <td mat-cell *matCellDef="let patientskord" style="background-color: rgb(248, 217, 171);"> {{patientskord.CD34kvar}} </td>                  
+                     </ng-container>
+            
+            
+            
+                   <!------------- PersonNr Description Column ------------>
+                       <!-- Skorddatum Description Column -->
+                       <ng-container matColumnDef="Skorddatum-description" >
+                         <th mat-header-cell *matHeaderCellDef style="font-weight:lighter; ">   </th>
+                         </ng-container> 
+                   <!-- LPK fore Description Column -->
+                    <ng-container matColumnDef="LPKfore-description" >
+                     <th mat-header-cell *matHeaderCellDef style="background-color: rgb(250, 181, 201);  "> (x10<sup>9</sup>/l) </th> 
+                   </ng-container> 
+                    <!-- CD34fore Description Column -->
+                    <ng-container matColumnDef="CD34fore-description" >
+                     <th mat-header-cell *matHeaderCellDef style="background-color: rgb(245, 202, 202);"> (x10<sup>9</sup>/l) </th>
+                     </ng-container>                  
+                   <!-- Volym Description Column -->
+                   <ng-container matColumnDef="Volym-description" >
+                     <th mat-header-cell *matHeaderCellDef style="background-color: rgb(217, 202, 245);">   </th>  
+                     </ng-container> 
+                                     
+                     <!-- LPKfrys Description Column -->
+                    <ng-container matColumnDef="LPKfrys-description" >
+                     <th mat-header-cell *matHeaderCellDef style=" background-color: rgb(253, 247, 165);"> (x10<sup>9</sup>/l)</th>                  
+                     </ng-container> 
+                      <!-- CD34after Description Column -->
+                    <ng-container matColumnDef="CD34frys-description" >
+                     <th mat-header-cell *matHeaderCellDef style="background-color: rgb(159, 241, 173);"> (x10<sup>6</sup>/kg) </th>
+                      </ng-container>
+                     <!-- CD34kvar Description Column -->
+                    <ng-container matColumnDef="CD34kvar-description" >
+                    <th mat-header-cell *matHeaderCellDef style="background-color: rgb(248, 217, 171);"> (x10<sup>6</sup>/kg) </th>
+                     </ng-container> 
+                       
+                    
+            
+                   <!-- The table will render two header rows, one data row per data object, and two footer rows. -->
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"
+                       class="example-first-header-row">
+                   </tr>
+                   <tr mat-header-row *matHeaderRowDef="['Skorddatum-description',
+                                                         'LPKfore-description',
+                                                         'CD34fore-description',                                                      
+                                                         'Volym-description',                                                                                                                          
+                                                         'LPKfrys-description',
+                                                         'CD34frys-description',
+                                                         'CD34kvar-description']"   class="example-second-header-row">
+                   </tr>
+            
+                   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            
+                 
+               </table>   
+ 
+
+            </div>
+        </div>  
+
+        <!-- colunm right start-->     
+        <div  class="  col-lg-4  ">
+            <div class="box ">
+                <div class="pi mt-2"> 
+                    <p  class="me-1"> Infrysning i -70 C<sup>o</sup></p>
+                        <input type="date" style="width:35%; height: 90%">   
+                        <input type="time" style="width:20%; height: 90%;"> 
+                                                                        
+                </div>
+                <div class="pi mb-2"> 
+                    <p  class="me-1">  Överflyttat till -15 C<sup>o</sup></p>
+                        <input type="date" style="width:35%; height: 90%;">   
+                        <input type="time" style="width:20%; height: 90%;"> 
+                                                                        
+                </div>
+            </div>
+            <div class="box  ">
+                <div class="textbox  p-2 mt-2">
+                    <textarea class="form-control" type="text" rows="auto" aria-label="">Övrigt </textarea>
+                </div>
+                <div class="pi mb-2" style=" margin-bottom: 0.3rem;" >
+                    <p style="margin-right: .5rem;"> BMA</p>
+                    <select type="text" style="width:80%;  height:1.4rem;  "> 
+                        <option value="list">list</option>
+                        <option> fjkkjhk</option>    
+                    </select>
+                </div>   
+            </div>
+        </div>
+        <!-- colunm right end -->
+    </div>
+ <!-- row3  end-->
+</div>

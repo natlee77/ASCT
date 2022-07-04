@@ -1,0 +1,59 @@
+.container {
+    /* background-color:rgb(229, 242, 253);       */
+    width: 100%; 
+    color:rgb(29, 60, 160);
+     
+    margin-top: .7rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;   
+    margin-bottom: 2rem;
+}
+.aktpatient{
+    margin-bottom: 2rem;   
+    
+}
+.btn{
+    background-color:rgb(229, 242, 253);  
+    padding-left: auto; 
+    padding-right: auto;
+    cursor: pointer;
+    /* -webkit-transition-duration: 0.2s;   */
+    /* transition-duration: 0.2s; */
+    transition: all 0,5s ease-in-out;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    font-weight: bold;
+}
+.btn:hover{
+    color: teal;
+}
+.lefthome{
+    border:  dotted;
+    color:   rgb(134, 179, 219);     
+    margin: 2rem;
+   
+    padding: 2rem;
+    border-radius: .5rem;
+}
+ 
+.card{
+    padding-top: 2rem;    
+    margin: auto;
+    background-color:rgb(229, 242, 253);  
+}
+.meeting{
+    background-color:rgb(229, 242, 253);  
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.days  {
+    width:  12.5rem;
+    height: 2.2rem;
+    margin: 0.5rem;
+    border-radius: .3rem;
+}
+.places{
+    width:  15rem;
+    height: 2.2rem;
+    margin: 0.5rem;
+    border-radius: .3rem;
+} 

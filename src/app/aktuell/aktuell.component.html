@@ -1,0 +1,111 @@
+
+<div class="container" > 
+   
+  <!-- patient info row -->
+  <div class="row  mb-1 box">
+   <div class="d-flex" style="justify-content: flex-start;">
+       <div class="me-4"> 
+       Aktuella patienter i listan  : ?
+       </div>
+       <div class="d-flex mx-4" style="justify-content:flex-end;">
+          
+ 
+          Nästa möte : Onsdag 2212-22-03 kl. 10:30
+       </div>
+   </div>
+ 
+ </div>
+   <!-- table row -->
+   
+   <table mat-table  [dataSource]="aktuella"  class="mat-elevation-z8">
+     <!-- 'PersonNr', 'Namn', 'Diagnos', 'Stamcellsskord','  'Skorddatum', 'Transplantation', 'CD34' -->
+               <ng-container matColumnDef="PersonNr">
+                           <th mat-header-cell *matHeaderCellDef> PersonNr </th>
+                           <td mat-cell *matCellDef="let aktuell"> {{aktuell.PersonNr}} </td>
+               </ng-container>                  
+                <!--  Namn Column -->
+               <ng-container matColumnDef="Namn">
+                   <th mat-header-cell *matHeaderCellDef> Namn </th>
+                   <td mat-cell *matCellDef="let  aktuell"> {{aktuell.Namn }} </td> 
+                </ng-container>  
+                <!-- Diagnos Column -->
+                <ng-container matColumnDef="Diagnos">
+                 <th mat-header-cell *matHeaderCellDef> Diagnos </th>
+                 <td mat-cell *matCellDef="let aktuell"> {{aktuell.Diagnos}} </td>
+                </ng-container>                
+                <!-- Stamcellsskörd Column -->
+                <ng-container matColumnDef="Stamcellsskord">
+              <th mat-header-cell *matHeaderCellDef> Stamcellsskörd </th>
+              <td mat-cell *matCellDef="let aktuell" style="color: red;"> {{aktuell.Stamcellsskord}} </td>                  
+                </ng-container>
+                <!-- Skorddatum Column -->
+                <ng-container matColumnDef="Skorddatum">
+                 <th mat-header-cell *matHeaderCellDef> Skörddatum </th>
+                 <td mat-cell *matCellDef="let aktuell"> {{aktuell.Skorddatum}} </td>  
+                 </ng-container>                 
+                 <!-- Transplantation Column -->
+                 <ng-container matColumnDef="Transplantation">
+                 <th mat-header-cell *matHeaderCellDef> Transplantation </th>
+                 <td mat-cell *matCellDef="let aktuell"> {{aktuell.Transplantation}} </td>                  
+                 </ng-container>
+                <!-- CD34 Column -->
+                <ng-container matColumnDef="CD34">
+                 <th mat-header-cell *matHeaderCellDef> CD34+ kvar </th>
+                 <td mat-cell *matCellDef="let aktuell"> {{aktuell.CD34}} </td>                  
+                 </ng-container>
+ 
+
+
+               <!------------- PersonNr Description Column ------------>
+                 <ng-container matColumnDef="PersonNr-description" >
+                   <th mat-header-cell *matHeaderCellDef>   </th>
+               </ng-container>  
+               <!-- Namn Description Column -->
+                <ng-container matColumnDef="Namn-description" >
+                   <th mat-header-cell *matHeaderCellDef>   </th>                      
+               </ng-container> 
+                <!-- Diagnos Description Column -->
+                <ng-container matColumnDef="Diagnos-description" >
+                 <th mat-header-cell *matHeaderCellDef>   </th>
+                 </ng-container>                  
+               <!-- Stamcellsskord Description Column -->
+               <ng-container matColumnDef="Stamcellsskord-description" >
+                 <th mat-header-cell *matHeaderCellDef  style="font-weight:lighter; "> (1:a CD34 bestämmning) </th>
+                 </ng-container> 
+                 <!-- Skorddatum Description Column -->
+                <ng-container matColumnDef="Skorddatum-description" >
+                 <th mat-header-cell *matHeaderCellDef style="font-weight:lighter; "> (Första och sista) </th>
+                 </ng-container>                    
+                 <!-- Transplantation Description Column -->
+                <ng-container matColumnDef="Transplantation-description" >
+                 <th mat-header-cell *matHeaderCellDef>    </th>                    
+                 </ng-container> 
+                 <!-- CD34 Description Column -->
+                <ng-container matColumnDef="CD34-description" >
+                <th mat-header-cell *matHeaderCellDef style="font-weight:lighter;"> (x10<sup>6</sup>/kg) </th>
+                 </ng-container> 
+                   
+                
+ 
+               <!-- The table will render two header rows, one data row per data object, and two footer rows. -->
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"
+                   class="example-first-header-row">
+               </tr>
+               <tr mat-header-row *matHeaderRowDef="['PersonNr-description',
+                                                     'Namn-description',
+                                                     'Diagnos-description',                                                      
+                                                     'Stamcellsskord-description',
+                                                     'Skorddatum-description',                                                      
+                                                     'Transplantation-description',
+                                                     'CD34-description']"   class="example-second-header-row">
+               </tr>
+ 
+               <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+ 
+             
+           </table>   
+    
+ 
+ 
+     
+ </div>

@@ -1,0 +1,78 @@
+<header>
+    <div class="header d-flex">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-12">
+                    <a [routerLink]="['/welcome']" routerLinkActive="router-link-active"><img src="assets/logo.jpg" alt="Region Örebro län logo" class="logo" /></a>
+                </div>
+                <div class="col-md-4 col-sm-12 offset-md-1 offset-lg-0">
+                    <h2>ASCT</h2>
+                </div>
+                <div class="col-md-1 offset-md-0 offset-lg-3">
+                    <a [routerLink]="['/login']" routerLinkActive="router-link-active" class="btn btn-primary mt-2">Login</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<nav class="navbar navbar-expand-lg navbar-light  " style=" background-color:rgb(229, 242, 253); ">
+    <div class="container-fluid">
+        <a class="navbar-brand" [routerLink]="['/welcome']">ASCT</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <!-- <a class="nav-link active" aria-current="page" routerLink="/Home">Home</a> -->
+                    <a [routerLink]="['/home']" routerLinkActive="router-link-active" class="nav-link active">Start</a>
+
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink]="['/aktuell']">Aktuella</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink]="['/patient']">Patient</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Link">Översikt</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink]="['/tslist']">TX-lista</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink]="['/skord']">Ny skörd</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink]="['/searchpatient']">Sök patient</a>
+                    </li>
+
+
+                    <!-- <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li> -->
+
+            </ul>
+            <form class="d-flex me-4">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+<main>
+    <router-outlet></router-outlet>
+</main>
+<footer>
+    <div class="container">
+        <!-- <fa-icon [icon]="faCopyright"></fa-icon> Region Örebro län   -->
+    </div>
+</footer>

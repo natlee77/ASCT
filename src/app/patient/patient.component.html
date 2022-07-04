@@ -1,0 +1,459 @@
+<div class="container">
+    <div class="row  mb-1 ms-1 box">
+        <div class="d-flex" style="justify-content: flex-end;">
+            <div class="me-4">
+                personnummer , last name , age , kö , diagnos, risk nivå
+            </div>
+            <div class="d-flex m-0" style="justify-content: flex-end;">
+                <section>
+                    <mat-checkbox class="check" [(ngModel)]="svar">Svar med stämpel skickat till CSK.</mat-checkbox>
+                </section>
+                <section style="color: red; ">
+                    <mat-checkbox class="check" [(ngModel)]="aktuell">Aktuell</mat-checkbox>
+                </section>
+            </div>
+        </div>
+
+    </div>
+    <!-- row 1 start-->
+    <div class="grid-container d-flex   ">
+        <!-- patient info start -->
+        <!-- <div id="exist-patient" class="box box-old col-lg-4" style="align-items: flex-end;">         
+            
+            <div class=" pi"  > 
+                <p class="mx-2"> Patient vikt(kg)</p>
+                <input type="text"style="width: 4rem;height: 80%;">               
+            </div>
+            <div class=" pi "  > 
+                <p class="mx-2"> Kärlstatus före 1:a skörd </p>
+                <input type="text"style="width: 4rem;height: 80%;">               
+            </div>
+            <div class=" pi "> 
+                <p class="mx-2"> LPK före 1:a skörd (x10<sup>9</sup>/l)</p>
+                <input type="text" style="width: 4rem; height: 80%;">               
+            </div>
+            <div class=" pi "> 
+                <p class="mx-2"> CD34+ före 1:a skörd (%)</p>
+                <input type="text" style="width: 4rem;height: 80%;">               
+            </div>
+            <div class="pi  "> 
+                <p class="mx-2"> CD34+ före 1:a skörd (x10<sup>6</sup>/l)</p>
+                <input type="text" style="width: 4rem;height: 80%;">               
+            </div>
+            <div class="pi  "> 
+                <p class="mx-2"> Total infryst CD34+ (x10<sup>6</sup>/kg)</p>
+                <input type="text" style="width: 4rem;height: 80%;">               
+            </div>
+            <div class="pi "> 
+                <p class="mx-2"> Kvar i frys CD34+ (x10<sup>6</sup>/kg)</p>
+                <div >
+                    <input type="text" style="width: 4rem;height: 80%;">   
+                </div>
+                            
+            </div> -->
+        <div id="ny-patient " class="box box-np col-lg-4 py-2" style="align-items: flex-end;">
+            <div class="d-flex mx-3 py-1 ">
+                <h6 style="color:red; ">Skapa Patient </h6>
+                <div style="margin-left:4rem;"> datum- {{today | date:'y:MM:dd ' }}</div>
+            </div>
+            <div class=" pi mt-2">
+                <p class="mx-2"> PersonNummer</p>
+                <input type="text" style="width:60%;height: 90%;">
+            </div>
+            <div class=" pi">
+                <p class="mx-2"> Efternamn</p>
+                <input type="text" style="width:60%;;height: 90%;">
+            </div>
+            <div class=" pi ">
+                <p class="mx-2"> Förnnamn </p>
+                <input type="text" style="width:60%;  height: 90%;">
+            </div>
+
+            <div class=" pi mt-3 ">
+                <p class="mx-2"> Diagnos</p>
+                <select type="text" style="width:60%;height: 90%;"> </select>
+            </div>
+            <div class="pi ">
+                <p class="mx-2"> Alvarlighet</p>
+                <select type="text" style="width:60%; height: 90%;"> </select>
+            </div>
+        </div>
+        <!-- patient info end -->
+        <!-- patient planering skörd  start-->
+        <div id="plan-stamcellskord" class="box col-lg-4 py-2">
+            <div class="d-flex mx-3 p-1">
+                <h6 style="color:red; ">Planering för stamcellsskörd </h6>
+                <h6 style=" margin-left:4rem;"> v.{{today | date:'w' }}</h6>
+            </div>
+            <div class="pi  ">
+                <select name="ASCT" id="asct" style="width: 6rem;height: 90%; background-color: rgb(247, 199, 215);">
+                    <option value=" ">ASCT</option>
+                    <option value="1asct">1 ASCT</option>
+                    <option value="2asct">2 ASCT</option>
+                    <option value="3asct">3 ASCT</option>
+                    <option value="CAR-T">CAR-T</option>
+                </select>
+
+
+            </div>
+            <div>
+                <div class="pi d-flex mx-1">
+
+                    <p class="mx-1"> Inläggning</p>
+                    <p
+                    style="width: 3rem;height: 91%;margin-right: 0.3rem;background-color: white;padding-left: .2rem">
+                    {{today | date:'EEE' }}</p>
+                    <input class="datum" type="datetime" style="width: 7rem;height: 90%; ">
+                </div>
+                <div class="pi d-flex mx-1">
+                    <p class=" me-1"> Behandling</p>
+                    <select name="behandling" id="bh" style="width: 6rem; height: 90%;margin-right: 0.3rem;">
+                        <option> </option>
+                        <option value="no-citostatika">Ingen Cytostatika</option>
+                        <option> </option>
+                        <option value="maxiCHOP-R">maxiCHOP-R</option>
+                        <option value="HDS">HDS</option>
+                        <option value="IKE">IKE</option>
+                        <option value="CHOEP-M">CHOEP-M</option>
+                        <option value="Cytosar">Cytosar</option>
+                        <option value="Neupogen">Neupogen</option>
+                        <option value="MIME">MIME</option>
+                        <option value="Avvakta">Avvakta</option>
+                        <option value="CHOP">CHOP</option>
+                        <option value="R-IKE">R-IKE</option>
+                        <option value="CHOEP">CHOEP</option>
+                        <option value="RGDP">RGDP</option>
+                        <option value="Bendamustin">Bendamustin</option>
+                        <option value="hyper-CVAD">hyper-CVAD</option>
+                        <option value="BEP-Ifosfamid">BEP-Ifosfamid</option>
+                        <option value="R-DHAP">R-DHAP</option>
+                        <option value="G-CSF">G-CSF</option>
+                        <option value="G-CSF+Mozobil">G-CSF+Mozobil</option>
+                    </select>
+                    <p
+                    style="width: 3rem;height: 91%;margin-right: 0.3rem;background-color: white;padding-left: .2rem">
+                    {{today | date:'EEE' }}</p>
+                    <input class="datum" type="datetime" style="width: 7rem;height: 90%; ">
+                </div>
+                <div class="pi d-flex mx-1">
+                    <p class=" me-1"> G-CSF</p>
+                    <select name="G-CSF" id="G-CSF" style="width: 6rem; height: 90%;margin-right: 0.3rem;">
+                        <option> </option>
+                        <option value="0.5 ME/kg x 1">0.5 ME/kg x 1</option>
+                        <option value="1 ME/kg x 1">1 ME/kg x 1</option>
+                        <option> </option>
+                        <option value="0.5 ME/kg x 2">0.5 ME/kg x 2</option>
+                        <option> </option>
+                        <option value="30 ME x 1">30 ME x 1</option>
+                        <option value="48 ME x 1">48 ME x 1</option>
+                        <option value="30+48 ME x 1">30+48 ME x 1</option>
+                        <option> </option>
+                        <option value="30 ME x 2">30 ME x 2</option>
+                        <option value="48 ME x 2">48 ME x 2</option>
+                    </select>
+                    <p
+                    style="width: 3rem;height: 91%;margin-right: 0.3rem;background-color: white;padding-left: .2rem">
+                    {{today | date:'EEE' }}</p>
+                    <input class="datum" type="datetime" style="width: 7rem;height: 90%; ">
+                </div>
+                <div class="pi d-flex mx-1">
+                    <p class=" me-1"> Mozobil</p>
+                    <select name="Mozobil" id="Mozobil" style="width: 6rem; height: 90%;margin-right: 0.3rem;">
+                        <option> </option>
+                        <option value="1 dose"> 1 dos</option>
+                        <option value="2 dose"> 2 dose</option>
+                    </select>
+                    <p
+                    style="width: 3rem;height: 91%;margin-right: 0.3rem;background-color: white;padding-left: .2rem">
+                    {{today | date:'EEE'  }}</p>
+                    <input class="datum" type="datetime" style="width: 7rem;height: 90%; ">
+                </div>
+                <div class="pi d-flex mx-1">
+                    <p class=" me-1">Första CD34+cellräkning</p>
+                    <p
+                        style="width: 3rem;height: 97%;margin-right: 0.3rem;background-color: white;padding-left: .2rem">
+                        {{today | date:'EEE' }}</p>
+
+                    <!-- <mat-form-field class="date1" appearance="outline">
+                        <input matInput formControlName="releasedAt" [matDatepickerFilter]="dateFilter"
+                            [matDatepicker]="releasedAtPicker">
+                        <mat-datepicker-toggle matSuffix [for]="releasedAtPicker">                          
+                            </mat-datepicker-toggle>
+                        <mat-datepicker #releasedAtPicker color="accent">
+                        </mat-datepicker>
+                    </mat-form-field> -->
+
+                    <input   type="date" style="width: 7rem;height: 96%; ">
+                </div>
+
+            </div>
+        </div>
+        <!-- patient planering skörd  end-->
+        <!-- patient planering infusion  start-->
+        <div id="plan-återfusion" class="box col-lg-4 py-2">
+            <div class=" d-flex mx-3">
+                <h6 style="color:red; ">Planering för återinfusion</h6>
+                <h6 style=" margin-left:4rem;"> v.{{today | date:'w' }}</h6>
+            </div>
+            <div>
+                <div class="pi d-flex mx-1">
+                    <p class="mx-2"> Inläggning</p>
+                    <input class="datum" type="date" style="width: 7rem;height: 90%; ">
+                </div>
+                <div class="pi d-flex mx-1">
+                    <p class=" me-1"> Behandling</p>
+                    <select name="behandling" id="bh" style="width: 6rem; height: 90%;margin-right: 0.3rem;">
+                        <option> </option>
+                        <option value="Karmustin-Tiotepa">Karmustin-Tiotepa</option>
+                        <option value="HDM">HDM</option>
+                        <option value="IKE">IKE</option>
+                        <option value="BEAC">BEAC</option>
+                        <option value="BEAM">BEAM</option>
+                        <option value="TIP">TIP</option>
+                        <option value="HDM 140">HDM 140</option>
+                        <option value="HDM+Bendamustin">HDM+Bendamustin</option>
+                        <option value="CE">CE</option>
+                        <option value="Sendox/ATG">Sendox/ATG</option>
+                        <option value="TECA">TECA</option>
+                        <option value="REI">REI</option>
+                    </select>
+                    <input class="weekday" type="date" style="width: 3rem;height: 90%;margin-right: 0.3rem;">
+                    <input class="datum" type="date" style="width: 7rem;height: 90%; ">
+                </div>
+                <div class="pi d-flex mx-1">
+                    <p class=" me-1"> Antal påsar / celler / volym </p>
+                    <select name="Antal påsar" id="Antal påsar" style="width: 3rem; height: 90%;margin-right: 0.3rem;">
+                        <option> </option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                    <input name="celler" type="text" style="width:3rem;height: 90%;margin-right: 0.3rem;">
+                    <input name="volym" type="text" style="width: 3rem;height: 90%; ">
+                </div>
+
+                <div class=" pi d-flex mx-1">
+                    <p class="mx-2">Forberedning av SC</p>
+                    <select name="Forberedning SC" id="Forberedning SC" style="width:55%; height: 90%; ">
+                        <option> </option>
+                        <option value="Frysttinade celler">Frysttinade celler</option>
+                        <option value="Tvättade celler">Tvättade celler</option>
+                    </select>
+                </div>
+                <div class=" pi d-flex mx-1">
+                    <p class="mx-1">Preliminär återinfusion</p>
+
+                    <form [formGroup]="contactForm" style="width: 3rem;height: 90%;margin-right: 0.3rem;">
+                        <p
+                            style="width: 3rem;height: 94%;margin-right: 0.3rem;background-color: white;padding-left: .2rem">
+                            {{today | date:'EEE' }}</p>
+
+                    </form>
+
+                    <input class="datum" type="date" style="width: 35%;height: 90%; ">
+
+                </div>
+                <div class="d-flex" style="justify-content: flex-end;">
+                    <button class="btn btn-outline-info">lägg till preliminär återinfusion</button>
+                </div>
+            </div>
+
+
+
+        </div>
+        <!-- patient planering infusion  end-->
+    </div>
+    <!-- row 1 end-->
+
+    <!-- row 2 start-->
+    <div class="grid-container d-flex  ">
+
+        <!-- column 1 start-->
+        <div class=" col-lg-4 ">
+            <div id="klinik" class="box py-2">
+                <div>
+                    <div class=" pi mt-1">
+                        <p class="me-2">Klinik</p>
+                        <select type="text" style="width:60%;height: 90%;">
+                        </select>
+                    </div>
+                    <div class=" pi my-1">
+                        <p class="mx-2">Ansvarige läkare</p>
+                        <select type="text" style="width:60%;;height: 90%;">
+                        </select>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="info" class="box py-2  ">
+                <div>
+                    <div class="pi my-1 m-0">
+                        <div class=" pi ">
+                            <p class="mx-1"> Längt</p>
+                            <input type="text" style="width:18%;height: 90%;">
+                            <p class="mx-1">Vikt </p>
+                            <input type="text" style="width:18%;height: 90%;">
+                            <p class="mx-1">Blodvolym</p>
+                            <input type="text" style="width:20%;;height: 90%;">
+                        </div>
+
+                    </div>
+                    <div class="pi mb-1">
+                        <div class=" pi ">
+                            <p class="me-1 ">PE för skörd</p>
+                            <input type="text" style="width:4rem;height: 90%;">
+                            <p class="mx-1 ">Datum</p>
+                            <input type="date" style="width:7rem;height: 90%;">
+                        </div>
+                    </div>
+
+                    <div class="pi mb-1">
+                        <p class="me-1">Kärlstatus</p>
+                        <input type="text" style="width:60%;;height: 90%;">
+                    </div>
+
+                    <div class="textbox  p-1">
+                        <textarea class="form-control" type="text" rows="auto" aria-label="">Övrigt </textarea>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- column 1 end-->
+
+
+        <!-- column 2 sstart-->
+        <div id="DARA" class="box  col-lg-8">
+            <div class="row">
+                <div id="row1">
+                    <div class="d-flex" style="justify-content: flex-end;">
+                        <div class="">
+                            <div class="pi mt-4  mx-1">
+                                <p class=" mx-3"> Datum</p>
+                                <p class=" mx-2"> g/l</p>
+
+                            </div>
+                            <div class="pi  mx-1">
+                                <input name=" " type="datetime" style="width: 8rem;height: 90%; ">
+                                <input name=" " type="text" style="width: 3rem;height: 90%; ">
+                            </div>
+                            <div class="pi  mx-1">
+                                <input name=" " type="date" style="width: 8rem;height: 90%; ">
+                                <input name=" " type="text" style="width: 3rem;height: 90%; ">
+                            </div>
+                            <div class="pi  mx-1">
+                                <input name=" " type="date" style="width: 8rem;height: 90%; ">
+                                <input name=" " type="text" style="width: 3rem;height: 90%; ">
+                            </div>
+                        </div>
+
+
+                        <div id="Smittscreen-fore-skörd" class="col-lg-4  border">
+                            <p class=" mx-1"> Smittscreen fore skörd</p>
+                            <div class="pi   mx-1">
+                                <p class=" me-1"> Datum</p>
+                                <input name="date" type="date" style="width: 6rem;height: 90%; ">
+                            </div>
+                            <div class="pi   mx-1">
+                                <p class=" me-1"> Ag HBs</p>
+                                <input name=" " type="text" style="width: 6rem;height: 90%; ">
+                            </div>
+                            <div class="pi d-flex mx-1">
+                                <p class=" me-1">Anti-HBc</p>
+                                <input name=" " type="text" style="width:6rem;height: 90%; ">
+                            </div>
+                            <div class="pi d-flex mx-1">
+                                <p class=" me-1">HCV</p>
+                                <input name=" " type="text" style="width:6rem;height: 90%; ">
+                            </div>
+                            <div class="pi d-flex mx-1">
+                                <p class=" me-1">HIV</p>
+                                <input name=" " type="text" style="width:6rem;height: 90%; ">
+                            </div>
+                            <div class="pi d-flex mx-1">
+                                <p class=" me-1">HTLV</p>
+                                <input name=" " type="text" style="width:6rem;height: 90%; ">
+                            </div>
+                        </div>
+                        <div id="DARA-kreatinin" class="col-lg-3 border">
+                            <p class=" mx-3"> DARA-kreatinin</p>
+
+
+
+                            <div class="pi   mx-1">
+                                <p class=" mx-3"> Kreatinin</p>
+                            </div>
+                            <div class="pi   mx-1">
+                                <p class=" me-1">Datum</p>
+                                <input name="date" type="date" style="width: 6rem;height: 90%; margin-right: .3rem;">
+                            </div>
+                            <div class="pi   mx-1">
+                                <p class=" me-1">mmol/l</p>
+                                <input name="" type="text" style="width: 6rem;height: 90%; margin-right: .3rem;">
+                            </div>
+                            <div class="pi   mx-1">
+                                <p class=" me-3"> Dara start</p>
+
+                            </div>
+                            <div class="pi mx-1">
+                                <p class=" me-1">Datum</p>
+                                <input name="date" type="date" style="width: 6rem;height: 90%;margin-right: .3rem; ">
+                            </div>
+                            <div class="pi   mx-1">
+                                <p class=" me-1"> Sjukhus</p>
+                                <select name=" " type="text" style="width:6rem; height: 90%;margin-right: .3rem;  ">
+                                    <option>USÖ</option>
+                                    <option>CSK</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div id="ASCT" class="col-lg-2  border">
+                            <p class=" mx-4"> ASCT </p>
+                            <div class="pi d-flex mx-1">
+                                <p class=" me-1"> 1:a </p>
+                                <input name="volym" type="date" style="width: 6rem;height: 90%; ">
+                            </div>
+                            <div class="pi d-flex mx-1">
+                                <p class=" me-1"> 2:a</p>
+                                <input name="volym" type="date" style="width: 6rem;height: 90%; ">
+                            </div>
+                            <div class="pi d-flex mx-1">
+                                <p class=" me-1">3:a</p>
+                                <input name=" " type="date" style="width:6rem;height: 90%; ">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div id="row2">
+                    <div id="komment" class="d-flex">
+                        <div class="textbox  p-1 col-lg-10">
+                            <textarea class="form-control" type="text" rows="auto" aria-label="">Övrigt </textarea>
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="m-3">
+                                <button class="btn btn-outline-info  " type="submit"> Spara </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- column 2 end -->
+    </div>
+    <!-- row 2 end-->
+
+    <!-- row 3 start    table-->
+    <div class=" box ">
+        <app-skordtable></app-skordtable>
+    </div>
+    <!-- row 3 end-->
+
+
+</div>
+ 
+  

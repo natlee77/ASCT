@@ -1,0 +1,32 @@
+.container {
+    background-color:rgb(229, 242, 253);      
+    width: 100%; 
+    color:rgb(29, 60, 160);
+    margin-top: .7rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;   
+    margin-bottom: 2rem;
+   
+}
+table {
+    width: 100%;
+  }
+  
+  .example-first-header-row th {
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+  
+  .example-second-header-row {
+    font-style:italic;
+    font-weight:lighter;
+     margin : 0;
+  }
+  
+  
+   
+  .box{
+    border: solid rgb(188, 219, 201); 
+    margin-bottom: .2rem; 
+    margin-left: .2rem; 
+}

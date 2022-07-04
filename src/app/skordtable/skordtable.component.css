@@ -1,0 +1,36 @@
+ 
+table {
+    width: 100%;
+   
+  }
+ 
+  .example-first-header-row  th  {
+    border-bottom: none;
+    padding-bottom: 0;
+    padding-left: .4rem;
+    margin: 0;
+     
+  }
+  .example-second-header-row th {
+    align-items: center;
+    padding-left: .3rem;
+  }
+  .example-second-header-row {
+    font-style: italic;
+    font-size:14px;
+  }
+  p {
+    margin-bottom: 0.1rem;
+    font-weight: bolder;
+  }
+ 
+tr.mat-header-row {
+    height: 36px;
+}
+ 
+td.mat-cell{
+  padding-left: .5rem;
+}
+tr.mat-row {
+  height: 35px;
+}

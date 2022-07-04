@@ -1,0 +1,60 @@
+<div class="container ">
+    <div class="d-flex  ">
+        <div class="lefthome col-lg-4 ">
+            <img src="assets/logo.png" class="mx-auto d-block" alt="... ">
+            <!-- img src="assets/logo.png"  -->
+            <div class="my-4">
+                <p>Support:</p>
+                tel: 111111111
+                <p>ssss@regionorebrolan.se</p>
+            </div>
+        </div>
+
+
+
+        <div class="righthome col-lg-4   offset-lg-2  pt-4">
+            <div class="aktpatient">
+                <button class="btn btn-outline-info" (click)="actuellaPatienter()" style=" padding-left: 6rem; padding-right: 6rem;color: rgb(250, 7, 7);width: 100%"> visa aktuella patienter</button>
+            </div>
+
+            <div class="card">
+                <form class="col-10 mx-4" [formGroup]="ssn" (ngSubmit)="onFormSubmit()" novalidate>
+                    <div class="form-group ">
+                        <label for="ssn" class="control-label mx-4" style="text-align: center ;color: blue;"> PersonNummer </label>
+
+                        <input class="form-control mx-2 " type="text" formControlName="ssntest" placeholder="yyyymmddxxxx">
+
+                        <div *ngIf="getUrl.ssntest.touched && getUrl.ssntest.invalid" class="alert alert-danger">
+                            <div *ngIf="getUrl.ssntest.errors?.required">Personnummer is required</div>
+                            <div *ngIf="getUrl.ssntest.errors?.pattern">Personnummer har felt format.Ange format </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline-info mx-2 mb-1 " style="margin-top: 2rem; width: 100%;" type="submit" [disabled]="!ssn.valid"> sök</button>
+                </form>
+
+            </div>
+            <div class="meeting ">
+                <label style="text-align: center;color: blue;  "> Nästa möte</label>
+                <div class="d-flex">
+                    <!-- <input class="form-control mx-2 my-2" type="date" placeholder="" aria-label=" "> -->
+                    <!-- <input class="form-control me-2 my-2 " type="time" placeholder="" aria-label=""> -->
+                </div>
+                <div class="d-flex ms-2">
+                    <p class="my-2 pt-1 ps-2" style="background-color: white;padding-left: .2rem; width: 7rem;">
+                        {{today | date:'EEEE' }}</p>
+
+                    <!-- <select class="places"> -->
+                    <!-- <option  *ngFor="let place of places" value="place"  > {{ place.item}} </option>
+                </select> -->
+
+                </div>
+                <div class="textbox mx-2 mb-3 pb-2">
+                    <!-- <textarea class="form-control" type="text" rows="auto" aria-label=""> </textarea> -->
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+</div>

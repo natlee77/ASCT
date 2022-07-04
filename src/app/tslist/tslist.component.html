@@ -1,0 +1,145 @@
+
+<div class="container" > 
+   
+  <!-- patient info row -->
+  <div class="row  mb-1 box">
+   <div class="d-flex" style="justify-content: flex-start;">
+       <div class="me-4"> 
+       Alla transplanterade patienter  : ?
+       </div>
+       <div class="d-flex mx-4" style="justify-content:flex-end;">
+          
+ 
+          Nästa möte : 458898709 kl. 78786886
+       </div>
+   </div>
+ 
+ </div>
+   <!-- table row -->
+   
+   <table mat-table  [dataSource]="TSlista"  class="mat-elevation-z8">
+     <!-- 'PersonNr', 'Namn', 'Diagnos', 'Region','Skord', '1', '2','3','Avliden', 'CD34' -->
+               <ng-container matColumnDef="PersonNr">
+                           <th mat-header-cell *matHeaderCellDef> PersonNr </th>
+                           <td mat-cell *matCellDef="let TSlist"> {{TSlist.PersonNr}} </td>
+               </ng-container>                  
+                <!--  Namn Column -->
+               <ng-container matColumnDef="Namn">
+                   <th mat-header-cell *matHeaderCellDef> Namn </th>
+                   <td mat-cell *matCellDef="let  TSlist"> {{TSlist.Namn }} </td> 
+                </ng-container>  
+                <!-- Diagnos Column -->
+                <ng-container matColumnDef="Diagnos">
+                 <th mat-header-cell *matHeaderCellDef> Diagnos </th>
+                 <td mat-cell *matCellDef="let TSlist"> {{TSlist.Diagnos}} </td>
+                </ng-container>
+                 <!-- Region Column -->
+              <ng-container matColumnDef="Region">
+               <th mat-header-cell *matHeaderCellDef> Region </th>
+               <td mat-cell *matCellDef="let TSlist"> {{TSlist.Region}} </td>                  
+               </ng-container>
+               <!-- Skörd Column -->
+              <ng-container matColumnDef="Skord">
+              <th mat-header-cell *matHeaderCellDef> Skörd </th>
+              <td mat-cell *matCellDef="let TSlist" style="color: red;"> {{TSlist.Skord}} </td>                  
+              </ng-container>
+                <!-- 1tx Column -->
+                <ng-container matColumnDef="tx1">
+                 <th mat-header-cell *matHeaderCellDef> 1:a TX </th>
+                 <td mat-cell *matCellDef="let TSlist"> {{TSlist.tx1}} </td>  
+                 </ng-container>
+                  <!-- 2tx Column -->
+                <ng-container matColumnDef="tx2">
+                 <th mat-header-cell *matHeaderCellDef> 2:a TX </th>
+                 <td mat-cell *matCellDef="let TSlist"> {{TSlist.tx2}} </td>  
+                 </ng-container>
+                  <!-- 3tx Column -->
+                <ng-container matColumnDef="tx3">
+                 <th mat-header-cell *matHeaderCellDef> 3:a TX </th>
+                 <td mat-cell *matCellDef="let TSlist"> {{TSlist.tx3}} </td>  
+                 </ng-container>
+                 <!-- Transplantation Column -->
+                 <ng-container matColumnDef="Avliden">
+                 <th mat-header-cell *matHeaderCellDef> Avliden </th>
+                 <td mat-cell *matCellDef="let TSlist"> {{TSlist.Avliden}} </td>                  
+                 </ng-container>
+                <!-- CD34 Column -->
+                <ng-container matColumnDef="CD34">
+                 <th mat-header-cell *matHeaderCellDef> CD34+ kvar </th>
+                 <td mat-cell *matCellDef="let TSlist"> {{TSlist.CD34}} </td>                  
+                 </ng-container>
+ 
+               <!------------- Item Description Column ------------>
+                 <ng-container matColumnDef="PersonNr-description">
+                   <th mat-header-cell *matHeaderCellDef>   </th>
+               </ng-container>  
+               <!-- Namn Description Column -->
+                <ng-container matColumnDef="Namn-description">
+                   <th mat-header-cell *matHeaderCellDef>   </th>                      
+               </ng-container> 
+                <!-- Diagnos Description Column -->
+                <ng-container matColumnDef="Diagnos-description">
+                 <th mat-header-cell *matHeaderCellDef>   </th>
+                 </ng-container> 
+                  <!-- Region Description Column -->
+                <ng-container matColumnDef="Region-description">
+                 <th mat-header-cell *matHeaderCellDef>   </th>
+                 </ng-container>
+               <!-- Stamcellsskord Description Column -->
+               <ng-container matColumnDef="Skord-description">
+                 <th mat-header-cell *matHeaderCellDef>   </th>                  
+                 </ng-container> 
+                 <!-- 1TX Description Column -->
+                <ng-container matColumnDef="tx1-description">
+                 <th mat-header-cell *matHeaderCellDef>   </th>                 
+                 </ng-container> 
+                  <!-- 2TX Description Column -->
+                <ng-container matColumnDef="tx2-description">
+                 <th mat-header-cell *matHeaderCellDef>   </th>
+                 </ng-container> 
+                  <!-- 3TX Description Column -->
+                <ng-container matColumnDef="tx3-description">
+                 <th mat-header-cell *matHeaderCellDef>   </th>
+                 </ng-container> 
+                 <!-- Avliden Description Column -->
+                <ng-container matColumnDef="Avliden-description">
+                 <th mat-header-cell *matHeaderCellDef>    </th>                    
+                 </ng-container> 
+                 <!-- CD34 Description Column -->
+                <ng-container matColumnDef="CD34-description">
+                 <!-- <th mat-header-cell *matHeaderCellDef> CD34 </th> -->
+                 <th mat-header-cell *matHeaderCellDef style="font-weight:lighter;"> (x10<sup>6</sup>/kg) </th>
+                 </ng-container> 
+                   
+               <!-- Disclaimer column
+                 <ng-container matColumnDef="disclaimer">
+                   <td mat-footer-cell *matFooterCellDef colspan="2">
+                   Please note that the cost of items displayed are completely and totally made up.
+                   </td>
+               </ng-container>   -->
+ 
+               <!-- The table will render two header rows, one data row per data object, and two footer rows. -->
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"
+                   class="example-first-header-row">
+               </tr>
+               <tr mat-header-row *matHeaderRowDef="['PersonNr-description',
+                                                     'Namn-description',
+                                                     'Diagnos-description',
+                                                     'Region-description',
+                                                     'Skord-description',
+                                                     'tx1-description',
+                                                     'tx2-description',
+                                                     'tx3-description',
+                                                     'Avliden-description',
+                                                     'CD34-description']"   class="example-second-header-row">
+               </tr>
+ 
+               <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+ 
+             
+           </table>   
+    
+ 
+ 
+     
+ </div>
