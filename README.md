@@ -1,6 +1,11 @@
 # AsctFrontend
+ENGLISH:
+The mission is to create a web application and database that will replace the current computer program called ACST, which will handle information about patients (social security number, diagnosis, weight, length, severity level) with cancer, their Lab analyses, stem cell harvest, planned infusion, harvested and planned transplant date , to analyze harvest, is calculated and divided into bags.
 
-Vad du vill göra? (syfte) 
+Available at the Pathologist, blood centers. Whole Lab medicine. Oncology clinic, hematologist clinic. Every other week they have a physical meeting where they plan which patients are current, waiting in line. Who should transplant. In order to be able to do chemotherapy, stem cells grow "Stem Cell Harvest". Freezing at the blood center. Powerful chemotherapy can knock out the hematopoietic system, after treatment the patient is given back the stem cells. Autolog -> the patient's own stem cells, located in Örebro. The allogene is given from a healthy patient, not available in Örebro.
+--------------------------------------------------
+SWENSKA
+  (syfte) 
            Idag ligger ASCT projekt i Klientprogramet ” Filemaker Pro -> Claris”, serverdrift. Filemaker kan presentera i webb också med samma layout men inte alla funktioner fungerar perfekt.
            Finns på Patologen, blodcentraler. Hela Lab medicin. Onkologklinik, hematologkliniken. Varannan vecka har de ett fysiskt möte där de planerar vilka patienter som är aktuella, står i kö. Vilka ska transplantera. För att kunna göra behandling med cellgift, odlar stamceller ”Stamcellsskörd”. Fryser på blodcentralen. Kraftfull cellgiftsbehandling kan slå ut blodbildningssystem, efter behandling ges patientet tillbaka stamcellerna. Autolog -> patientens egna stamceller, finns i Örebro. Allogen ges från en frisk patient, finns ej i Örebro.
 Uppdraget är att skapa en webbapplikation och databas som ersätter nuvarande dataprogram vid namn ACST, som ska hantera info om patienter (personnummer, diagnos, vikt, längt, svårighet nivå) med cancer, deras Lab analyser, stamcellsskörd, inplanerad infusion, skördade och inplanerat transplantationsdatum, att analysera skörd, beräknas och delas upp i påsar. 
